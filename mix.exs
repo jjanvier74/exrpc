@@ -10,7 +10,7 @@ defmodule Exrpc.MixProject do
       description: "Lean Elixir RPC library based on RESP (REdis Serialization Protocol)",
       package: package(),
       version: @version,
-      elixir: "~> 1.14",
+      elixir: "~> 1.15.8",
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
@@ -34,13 +34,13 @@ defmodule Exrpc.MixProject do
 
   defp deps do
     [
-      {:benchee, "~> 1.1", only: :test},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.30.1", only: :dev, runtime: false},
-      {:memoize, "~> 1.4"},
-      {:plug_crypto, "~> 1.2"},
-      {:redix, "~> 1.2"},
-      {:sobelow, "~> 0.12", only: [:dev, :test], runtime: false},
+      {:benchee, "~> 1.3.1", only: :test},
+      {:credo, "~> 1.7.8", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.30.9", only: :dev, runtime: false},
+      {:memoize, "~> 1.4.3"},
+      {:plug_crypto, "~> 2.1.0"},
+      {:redix, "~> 1.5.2"},
+      {:sobelow, "~> 0.13.0", only: [:dev, :test], runtime: false},
       {:thousand_island, "~> 0.6.7"}
     ]
   end
